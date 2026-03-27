@@ -11,7 +11,8 @@ class DirectoryListing {
         if (directory.isDirectory()) {
             System.out.println("Files under " + directory.getName());
             File[] contents = directory.listFiles();
-            for (File file : contents) {
+            for (int i=0;i<contents.length;i++) {
+                File file=contents[i];
                 System.out.println(file.getName());
                 listFilesAndDirectories(file);
             }
